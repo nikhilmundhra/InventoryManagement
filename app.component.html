@@ -1,0 +1,12 @@
+<div>
+    <h1>{{pageHeader}}</h1>
+    <!--<list-product></list-product>-->
+    <div style="padding:5px">
+        <ul class="nav nav-tabs">
+            <li> <a routerLink="home">Home</a></li>
+            <li> <a routerLink="products">Products</a> </li>
+        </ul>
+        <router-outlet></router-outlet>
+        <a routerLink="product/add">Add Product</a>
+    </div>
+</div>
