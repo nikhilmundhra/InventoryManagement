@@ -1,0 +1,40 @@
+﻿<h1>{{title}} Product</h1>
+<hr>
+
+<form [formGroup]="productForm" (ngSubmit)="save()" novalidate>
+    <div class="form-group row">
+        <label for="" class="col-md-12">Name</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control"
+                   formControlName="ProductName">
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="form-group row">
+        <label for="" class="col-md-12">TypeId</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control"
+                   formControlName="TypeId">
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="form-group row">
+        <label for="" class="col-md-12">VendorId</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control"
+                   formControlName="VendorId">
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-12">
+            <input type="submit"
+                   class="btn btn-primary"
+                   value="Save" />
+            <input type="button"
+                   class="btn btn-warning"
+                   value="Cancel"
+                   (click)="cancel()">
+        </div>
+    </div>
+</form>

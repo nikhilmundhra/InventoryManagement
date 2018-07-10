@@ -1,0 +1,31 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>ProductType</th>
+            <th>Vendor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.ProductId }}</td>
+            <td>{{ product.ProductName }}</td>
+            <td>
+                <a [routerLink]="['/productType',product.TypeId]">
+                    {{ product.TypeName }}
+                </a>
+            </td>
+            <td>
+                <a [routerLink]="['/vendor',product.VendorId]">
+                    {{ product.VendorName }}
+                </a>
+            </td>
+            <td>
+                <a [routerLink]="['/product/edit',product.ProductId]">Edit</a>
+            </td>
+        <tr *ngIf="!products || products.length==0">
+            <td colspan="5">No products to display!</td>
+        </tr>
+    </tbody>
+</table>
